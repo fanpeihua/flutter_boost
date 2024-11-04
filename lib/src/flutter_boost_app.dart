@@ -153,9 +153,9 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
           final canPop = topContainer!.navigator!.canPop();
           if (canPop) {
             topContainer!.navigator!.pop();
-            return true;
+            return false;
           }
-          return false;
+          return true;
         },
         child: Listener(
             onPointerDown: _handlePointerDown,
