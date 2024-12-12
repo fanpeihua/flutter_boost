@@ -48,7 +48,7 @@
 - (void)activeContainer:(id<FBFlutterContainer>)container
             forUniqueId:(NSString *)uniqueId {
   if (uniqueId == nil || container == nil) return;
-  assert(self.allContainers[uniqueId] != nil);
+  if(self.allContainers[uniqueId] == nil) return;
   if ([self.activeContainers containsObject:container]) {
     [self.activeContainers removeObject:container];
   }
